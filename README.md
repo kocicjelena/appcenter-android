@@ -2,7 +2,7 @@ Create any app in https://appcenter.ms, then configure several branches.
 Implement C# Console App or NodeJS console app (or any other preferred app type/language) which does the following using App Center API(https://openapi.appcenter.ms/#/build)
 
 Visual Studio App Center is an integrated mobile development lifecycle solution for iOS, Android, Windows and macOS apps. It brings together multiple services commonly used by mobile developers, including build, test, distribute, monitoring, diagnostics , etc., into one single integrated cloud solution.
-I am using Android.
+I am using Android.I have used these steps:
 1. Log in to Visual Studio App Center.
 2. Click the Add new dropdown in the upper-right corner of the page, then choose Add new app.
 3. App Center opens the panel which have to be populated.
@@ -55,6 +55,14 @@ PowerShell has to be used:
 Import-Module MSOnline
 (I need more time to make this work)
 I have some issues building the apk and it is not on appcenter.
+Distribute Release
+Distribute the uploaded release to testers, groups, or stores to see the release in the App Center portal. The three endpoints are:
+
+POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/testers
+POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/groups
+POST /v0.1/apps/{owner_name}/{app_name}/releases/{release_id}/stores
+$API_TOKEN and $DISTRIBUTION_GROUP_ID are chosen from appcenter:
+curl -X POST -H "Content-Type: application/json" -H "Accept: application/json" -H "X-API-Token: $API_TOKEN" -d "{ \"id\": "$DISTRIBUTION_GROUP_ID", \"mandatory_update\": false, \"notify_testers\": false}"
 
 
 This is what has been in the readme at github repo which I have forked:
