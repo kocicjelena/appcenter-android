@@ -33,7 +33,8 @@ Print the following information to console output
 < branch name > build < completed/failed > in 125 seconds. Link to build logs: < link >
 From https://github.com/microsoft/appcenter-cli.git I used this command:
 appcenter build branches list --app kocicjelena.com/home2
-The ioutput is:
+
+The output is:
 Branch:         master
 Build ID:       2
 Build status:   inProgress
