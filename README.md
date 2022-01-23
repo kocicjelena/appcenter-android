@@ -55,6 +55,8 @@ PowerShell has to be used:
 Import-Module MSOnline
 (I need more time to make this work)
 I have some issues building the apk and it is not on appcenter.
+
+
 Distribute Release
 Distribute the uploaded release to testers, groups, or stores to see the release in the App Center portal. The three endpoints are:
 
